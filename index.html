@@ -1,10 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>Bingo App</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bingo Español - 90 Bolas</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Bingo</h1>
-  <button onclick="alert('Hola!')">Click</button>
+  <div class="container">
+    <header>
+      <h1>Bingo Español</h1>
+      <p class="subtitle">90 bolas</p>
+    </header>
+
+    <div class="status-bar">
+      <span id="bolasRestantes">Bolas restantes: 90</span>
+      <span id="estado" class="estado pausado">Pausado</span>
+    </div>
+
+    <div class="numero-actual" id="numeroActual">--</div>
+
+    <div class="botones">
+      <button id="btnIniciar" class="btn btn-verde">Iniciar</button>
+      <button id="btnPausar" class="btn btn-naranja" disabled>Pausar</button>
+      <button id="btnReiniciar" class="btn btn-rojo">Reiniciar</button>
+    </div>
+
+    <div class="historial">
+      <h2>Historial</h2>
+      <div id="historialLista"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
