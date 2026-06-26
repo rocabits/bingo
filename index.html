@@ -2,19 +2,25 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bingo Español - 90 Bolas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#2ecc71">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>Bingo</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.svg">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <header>
-      <h1>Bingo Español</h1>
+      <h1>Bingo</h1>
       <p class="subtitle">90 bolas</p>
     </header>
 
     <div class="status-bar">
-      <span id="bolasRestantes">Bolas restantes: 90</span>
+      <span id="bolasRestantes">90 restantes</span>
       <span id="estado" class="estado pausado">Pausado</span>
     </div>
 
@@ -24,6 +30,7 @@
       <button id="btnIniciar" class="btn btn-verde">Iniciar</button>
       <button id="btnPausar" class="btn btn-naranja" disabled>Pausar</button>
       <button id="btnReiniciar" class="btn btn-rojo">Reiniciar</button>
+      <button id="btnMute" class="btn btn-mute" title="Activar/desactivar voz">🔊</button>
     </div>
 
     <div class="historial">
@@ -31,6 +38,8 @@
       <div id="historialLista"></div>
     </div>
   </div>
+
+  <div id="toast" class="toast"></div>
 
   <script src="script.js"></script>
 </body>
